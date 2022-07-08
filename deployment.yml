@@ -1,0 +1,12 @@
+---
+
+- hosts: web
+  become: yes
+
+  tasks:
+  - name: deploying the file
+    copy:
+      src: /home/ec2-user/*.war
+      dest: /home/ec2-user/
+
+...
